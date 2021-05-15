@@ -95,6 +95,7 @@ export default {
     onSubmit() {
       // makovod611@aprimail.com
       // makovod
+      this.loading = true;
      this.$store.dispatch("user/login", {username: this.user.email, password: this.user.password})
         .then(res => {
           window.location.replace("/");
@@ -102,10 +103,6 @@ export default {
         .catch(err => {
           this.loading = false;
           this.failed = true;
-          this.$refs["failed"].$el.scrollIntoView({
-            block: "end",
-            scrollBehavior: "smooth"
-          });
         });
     }
   },

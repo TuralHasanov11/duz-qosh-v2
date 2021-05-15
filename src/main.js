@@ -28,7 +28,7 @@ import "./assets/css/admin.css";
 import "./assets/js/admin";
 
 // Axios Requests
-axios.defaults.baseURL = "http://34.90.26.163:8443/api";
+axios.defaults.baseURL = "https://34.90.26.163:8443/api";
 axios.defaults.headers.common["Content-Type"] = "application/json";
 
 // Filters
