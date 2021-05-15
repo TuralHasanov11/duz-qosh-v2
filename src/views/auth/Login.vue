@@ -101,14 +101,11 @@ export default {
         })
         .catch(err => {
           this.loading = false;
-          let res = err.response.data;
-          if (res.status && res.status == 401) {
-            this.failed = true;
-            this.$refs["failed"].$el.scrollIntoView({
-              block: "end",
-              scrollBehavior: "smooth"
-            });
-          }
+          this.failed = true;
+          this.$refs["failed"].$el.scrollIntoView({
+            block: "end",
+            scrollBehavior: "smooth"
+          });
         });
     }
   },

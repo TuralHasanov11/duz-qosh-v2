@@ -71,9 +71,11 @@ const actions = {
       let res = await axios.get("user");
 
       commit("SET_USER", res.data);
+      return res;
     } catch (e) {
       commit("SET_TOKEN", null);
       commit("SET_USER", null);
+      return e;
     }
   },
 
