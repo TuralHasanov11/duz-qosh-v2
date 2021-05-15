@@ -95,7 +95,7 @@ export default {
     onSubmit() {
       // makovod611@aprimail.com
       // makovod
-     store.dispatch("user/login", {username: this.user.email, password: this.user.password})
+     this.$store.dispatch("user/login", {username: this.user.email, password: this.user.password})
         .then(res => {
           window.location.replace("/");
         })
