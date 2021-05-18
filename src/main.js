@@ -30,6 +30,7 @@ import "./assets/js/admin";
 // Axios Requests
 axios.defaults.baseURL = "https://34.90.26.163:8443/api";
 axios.defaults.headers.common["Content-Type"] = "application/json";
+axios.defaults.withCredentials = true;
 
 // Filters
 Vue.filter('deadlineFilter', DeadlineFilter);
